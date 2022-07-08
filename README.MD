@@ -1,5 +1,5 @@
-# Título do Projeto
-##  Breve descrição do projeto
+# Watchdog folder OCR Imagem
+##  Observa pasta determinada e dispara algum evento na mudança da pasta
 
 <br>
   <div align="center">
@@ -30,17 +30,16 @@ Visite meu WebSite [https://www.enedino.com.br](https://www.enedino.com.br)
 
 ## Objetivo:
 
-Lista dos objetivos
+Observar inserção de arquivos em uma pasta específica do sistema
+
+E disparar uma ação para tratar este arquivo
+
+Neste teste apenas uma mensagem é exibida no console
+
+De um modo geral pode ser utilizado para qualquer Script ou programa
 
 
 
-# Próximas features 
-
-
-## Utilização do programa 
-
-<br>
-_______________________
 
 
 <br>
