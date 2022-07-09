@@ -1,5 +1,15 @@
-# Watchdog folder OCR Imagem
-##  Observa pasta determinada e dispara algum evento na mudança da pasta
+# Monitora pasta e converte imagens em texto - OCR OpenCV
+##  Observa pasta watchdog
+
+Quando um novo arquivo é inserido
+
+Dispara uma ação para tratar este arquivo
+
+Caso seja uma imagem faz a leitura OCR convertendo em texto
+
+
+<br><br>
+O código de Watchdog pode ser reaproveitado para disparar outro tipo de evento
 
 <br>
   <div align="center">
@@ -27,19 +37,6 @@
 
 Visite meu WebSite [https://www.enedino.com.br](https://www.enedino.com.br)
   <br><br><br>
-
-## Objetivo:
-
-Observar inserção de arquivos em uma pasta específica do sistema
-
-E disparar uma ação para tratar este arquivo
-
-Neste teste apenas uma mensagem é exibida no console
-
-De um modo geral pode ser utilizado para qualquer Script ou programa
-
-
-
 
 
 <br>
