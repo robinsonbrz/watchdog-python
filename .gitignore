@@ -135,3 +135,4 @@ staticfiles/
 *.exe
 /utils
 /watchfolder
+OCR_text.txt

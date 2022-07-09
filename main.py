@@ -11,14 +11,13 @@ import ocr
 
 PATH1 = str(pathlib.Path(__file__).parent.resolve()) + '\watchedfolder'
 
+
 def lista_arquivos_da_pasta_monitorada():
     '''Lista arquivos na pasta monitorada'''
     # path1 = str(pathlib.Path(__file__).parent.resolve()) + '\watchfolder'
 
     os.chdir(path=PATH1)
     return glob.glob("*.*")
-
-
 
 
 def print_file(file_name):
@@ -43,21 +42,6 @@ def on_created(event):
         return 
 
     return
-        
-
-def on_deleted(event):
-    # print("deleted")
-    pass
-        
-
-def on_modified(event):
-    # print("modified")
-    pass
-        
-
-def on_moved(event):
-    # print("moved")
-    pass
 
 
 if __name__ == "__main__":
@@ -71,11 +55,11 @@ if __name__ == "__main__":
     image_list.apend_list_image( list_files.sort(key=os.path.getmtime))
     event_handler = FileSystemEventHandler()
 
-    # calling functions
+    # calling functions for events
     event_handler.on_created = on_created
-    event_handler.on_deleted = on_deleted
-    event_handler.on_modified = on_modified
-    event_handler.on_moved = on_moved
+    # event_handler.on_deleted = on_deleted
+    # event_handler.on_modified = on_modified
+    # event_handler.on_moved = on_moved
 
     # caminho que será monitorado
     observer = Observer()

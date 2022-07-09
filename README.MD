@@ -7,6 +7,8 @@ Dispara uma ação para tratar este arquivo
 
 Caso seja uma imagem faz a leitura OCR convertendo em texto
 
+O texto reconhecido pelo OCR é gavado em: "OCR_text.txt" na raiz do projeto
+
 
 <br><br>
 O código de Watchdog pode ser reaproveitado para disparar outro tipo de evento
