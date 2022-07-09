@@ -9,11 +9,12 @@ from watchdog.observers import Observer
 
 import ocr
 
-PATH1 = str(pathlib.Path(__file__).parent.resolve()) + '\watchfolder'
+PATH1 = str(pathlib.Path(__file__).parent.resolve()) + '\watchedfolder'
 
 def lista_arquivos_da_pasta_monitorada():
     '''Lista arquivos na pasta monitorada'''
     # path1 = str(pathlib.Path(__file__).parent.resolve()) + '\watchfolder'
+
     os.chdir(path=PATH1)
     return glob.glob("*.*")
 
@@ -64,10 +65,9 @@ if __name__ == "__main__":
     # objeto acumula a lista de arquivos inseridos na pasta
     image_list = ocr.Image_list()
 
-
     list_files = lista_arquivos_da_pasta_monitorada()
 
-    # Casa exista arquivos no diretório já inicializa com a lista desses arquivos
+    # Casa exista arquivos no diretório já inicializa com a lista desses arquivos no objeto
     image_list.apend_list_image( list_files.sort(key=os.path.getmtime))
     event_handler = FileSystemEventHandler()
 
@@ -78,9 +78,8 @@ if __name__ == "__main__":
     event_handler.on_moved = on_moved
 
     # caminho que será monitorado
-    path = str(pathlib.Path(__file__).parent.resolve()) + '\watchfolder'
     observer = Observer()
-    observer.schedule(event_handler, path, recursive=False)
+    observer.schedule(event_handler, PATH1, recursive=False)
     observer.start()
     try:
         print("\n##################### Iniciado #####################\nMonitorando a pasta: ", PATH1)
@@ -90,19 +89,3 @@ if __name__ == "__main__":
         observer.stop()
         print("terminado")
     observer.join()
-    
-
-
-# caminho = str(pathlib.Path(__file__).parent.resolve()) + '\watchfolder'
-# print(caminho)
-
-
-
-
-
-
-
-
-
-
-

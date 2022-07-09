@@ -47,8 +47,20 @@ class Image():
         pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH + r'\tesseract.exe'
         self.text = pytesseract.image_to_string(imagem, lang="por")
         # retorno da leitura do arquivo
-        print("\n\n\n#################", self.image_name, "#################\n\n\n")
-        print(self.text)
+        f = open("..\\OCR_text.txt", "a")
+        f.write("#################\n")
+        f.write(self.image_name)
+        f.write("\n")
+        f.write("\n")
+        f.write(self.text)
+        f.write("\n")
+        f.close()
+        print("Arquivo reconhecido: ", self.image_name)
+
+        #open and read the file after the appending:
+        # f = open("..\\OCR_text.txt", "r")
+        # print(f.read()) 
+        return
 
 
 if __name__ == "__main__":
