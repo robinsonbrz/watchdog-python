@@ -1,11 +1,8 @@
 
 import glob
-import logging
 import os
 import pathlib
-import sys
 import time
-from cmath import e
 
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
