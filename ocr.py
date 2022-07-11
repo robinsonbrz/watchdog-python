@@ -3,7 +3,8 @@ import pathlib
 import cv2
 import pytesseract
 
-# corrigir instalação windows: https://stackoverflow.com/questions/50951955/pytesseract-tesseractnotfound-error-tesseract-is-not-installed-or-its-not-i
+# corrigir instalação windows:
+# https://stackoverflow.com/questions/50951955/pytesseract-tesseractnotfound-error-tesseract-is-not-installed-or-its-not-i
 
 # instalar outra língua: https://github.com/tesseract-ocr/tessdata
 # baixar o arquivo por,**** e colar na pasta do tesseract
@@ -15,9 +16,8 @@ import pytesseract
 
 class Image_list():
     '''Classe armazena lista dos arquivos da pasta'''
-    def __init__(self ):
+    def __init__(self):
         self.file_names = []
-    
 
     def new_image(self, image_full_file_name):
         # descobrir novo arquivo
@@ -30,11 +30,11 @@ class Image_list():
         # retorna o novo arquivo
         return new_file
 
-
     def apend_list_image(self, image_full_file_name):
         # append lista
         self.file_names.append(image_full_file_name)
         return
+
 
 class Image():
     def __init__(self, image_full_file_name):
@@ -56,15 +56,12 @@ class Image():
         f.write("\n")
         f.close()
         print("Arquivo reconhecido: ", self.image_name)
-
-        #open and read the file after the appending:
-        # f = open("..\\OCR_text.txt", "r")
-        # print(f.read()) 
+        print(self.text)
         return
 
 
 if __name__ == "__main__":
-    path1 = str(pathlib.Path(__file__).parent.resolve()) + '\watchfolder'
+    path1 = str(pathlib.Path(__file__).parent.resolve()) + r'\watchfolder'
     arquivo = '\\nome_arquivo_teste.jpg'
     full_file_name = path1 + arquivo
     img1 = Image(full_file_name)

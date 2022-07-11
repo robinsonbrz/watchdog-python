@@ -134,5 +134,6 @@ staticfiles/
 
 *.exe
 /utils
+/watchedfolder
 /watchfolder
 OCR_text.txt
